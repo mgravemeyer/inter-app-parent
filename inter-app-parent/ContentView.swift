@@ -12,18 +12,6 @@ struct ContentView: View {
 
     let pasteboard = UIPasteboard.general
     
-    init() {
-        let DocumentDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first
-        do {
-            let urls = try FileManager.default.contentsOfDirectory(at: DocumentDirectory!, includingPropertiesForKeys: nil)
-            for url in urls {
-                print(url.lastPathComponent)
-            }
-        } catch {
-            print(error.localizedDescription)
-        }
-    }
-    
     var body: some View {
         NavigationView {
             List {
