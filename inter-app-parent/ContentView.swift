@@ -9,17 +9,22 @@ import SwiftUI
 import MobileCoreServices
 
 struct ContentView: View {
-    
+
     let pasteboard = UIPasteboard.general
     
     var body: some View {
-        VStack {
-            Button("Pasteboard -> [NSArray]") {
-                pasteboard.string = "String form parent"
-            }
-            Button("Pasteboard -> UIImage") {
-                pasteboard.image = UIImage(named: "testImage")
-            }
+        NavigationView {
+            List {
+                Section(header: Text("UIPasteboard General")) {
+                    Button("Pasteboard -> String") {
+                        pasteboard.string = "String form parent"
+                    }
+                    Button("Pasteboard -> UIImage") {
+                        pasteboard.image = UIImage(named: "testImage")
+                    }
+                }
+            }.navigationTitle("SE_21")
+            .listStyle(GroupedListStyle())
         }
     }
 }
