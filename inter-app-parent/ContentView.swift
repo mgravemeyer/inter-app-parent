@@ -25,7 +25,7 @@ struct ContentView: View {
                 }
                 Section(header: Text("URL")) {
                     Button("🪄 URL") {
-                        UIApplication.shared.open(URL(string: "inter-app-child://fromURL")!, options: [:], completionHandler: nil)
+                        UIApplication.shared.open(URL(string: "inter-app-child://screen1?textSent=hi")!, options: [:], completionHandler: nil)
                     }
                 }
             }.navigationTitle("SE_21")
