@@ -28,7 +28,7 @@ struct ContentView: View {
                         UIApplication.shared.open(URL(string: "inter-app-child://screen1?textSent=hi")!, options: [:], completionHandler: nil)
                     }
                 }
-            }.navigationTitle("SE_21")
+            }.navigationTitle("SE_21 Parent")
             .listStyle(GroupedListStyle())
         }
     }
