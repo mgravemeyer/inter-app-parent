@@ -18,7 +18,7 @@ struct ContentView: View {
                 pasteboard.string = "String form parent"
             }
             Button("Pasteboard -> UIImage") {
-                pasteboard.string = "from parent app!"
+                pasteboard.image = UIImage(named: "testImage")
             }
         }
     }
