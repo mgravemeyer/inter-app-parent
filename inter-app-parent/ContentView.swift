@@ -23,6 +23,11 @@ struct ContentView: View {
                         pasteboard.image = UIImage(named: "testImage")
                     }
                 }
+                Section(header: Text("URL")) {
+                    Button("🪄 URL") {
+                        UIApplication.shared.open(URL(string: "inter-app-child://fromURL")!, options: [:], completionHandler: nil)
+                    }
+                }
             }.navigationTitle("SE_21")
             .listStyle(GroupedListStyle())
         }
