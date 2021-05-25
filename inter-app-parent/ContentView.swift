@@ -16,10 +16,10 @@ struct ContentView: View {
         NavigationView {
             List {
                 Section(header: Text("UIPasteboard General")) {
-                    Button("Pasteboard -> String") {
+                    Button("🔠 String") {
                         pasteboard.string = "String form parent"
                     }
-                    Button("Pasteboard -> UIImage") {
+                    Button("🖼 UIImage") {
                         pasteboard.image = UIImage(named: "testImage")
                     }
                 }
