@@ -12,6 +12,13 @@ struct ContentView: View {
 
     let pasteboard = UIPasteboard.general
     
+    let userDefaults = UserDefaults(suiteName: "com.maximiliangravemeyer.inter-app.userdefaults")
+    
+    init() {
+        userDefaults!.set("String" as String, forKey: "keyForString")
+        userDefaults!.set(true as Bool, forKey: "keyForBool")
+    }
+    
     var body: some View {
         NavigationView {
             List {
